@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="wanna">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -19,6 +19,10 @@
   
     <link rel="shortcut icon" href="/favicon.png">
   
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
   
   
 <link rel="stylesheet" href="/css/style.css">
@@ -69,6 +73,56 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flowable的初始化部署" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/08/08/flowable%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E9%83%A8%E7%BD%B2/" class="article-date">
+  <time class="dt-published" datetime="2024-08-08T01:49:27.000Z" itemprop="datePublished">2024-08-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/08/08/flowable%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E9%83%A8%E7%BD%B2/">flowable的初始化部署</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>当我使用flowable7.0.1时，当时在tomcat部署时，使用的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\catalina run</span><br></pre></td></tr></table></figure>
+<p>命令部署flowable。<br>使用下面命令验证一下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --user rest-admin:<span class="built_in">test</span> http://localhost:8080/flowable-rest/service/management/engine</span><br></pre></td></tr></table></figure>
+<p>会返回404的错误，不是一个json字符串<br><img src="/2024/08/08/flowable%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E9%83%A8%E7%BD%B2/1.png" alt="图1"></p>
+<p>但我以为会是flowable版本问题，就换了个6.8.1(但应该跟这个没关系),而是直接使用tomcat启动命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">startup.bat</span><br></pre></td></tr></table></figure>
+<p>或 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">startup.sh</span><br></pre></td></tr></table></figure>
+<p>我用的是startup.bat，就成功了<br><img src="/2024/08/08/flowable%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E9%83%A8%E7%BD%B2/2.png" alt="图2"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/08/08/flowable%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E9%83%A8%E7%BD%B2/" data-id="clzknuly40001dove5dlzgl6f" data-title="flowable的初始化部署" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flowable/" rel="tag">flowable</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-WinRAR环境配置" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/08/06/WinRAR%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="article-date">
@@ -96,7 +150,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/08/06/WinRAR%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" data-id="clzj69qz90000n0ve1puh9uu6" data-title="WinRAR环境配置" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/08/06/WinRAR%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" data-id="clzknulxy0000dove3gvd6vwn" data-title="WinRAR环境配置" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -137,7 +191,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/22/%E6%88%91%E7%9A%84%E4%BA%BA%E7%94%9F%E5%8E%86%E7%A8%8B/" data-id="clzj69qzo0004n0ve0to6cjrp" data-title="我的人生历程" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/12/22/%E6%88%91%E7%9A%84%E4%BA%BA%E7%94%9F%E5%8E%86%E7%A8%8B/" data-id="clzknulyc0007doveftcadb48" data-title="我的人生历程" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -188,7 +242,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/22/hello-world/" data-id="clzj69qzn0003n0ve1k62dekv" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/12/22/hello-world/" data-id="clzknuly80003dove1agrfh0x" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -213,7 +267,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" rel="tag">环境配置</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/flowable/" rel="tag">flowable</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" rel="tag">环境配置</a></li></ul>
     </div>
   </div>
 
@@ -223,7 +277,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">环境配置</a>
+      <a href="/tags/flowable/" style="font-size: 10px;">flowable</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">环境配置</a>
     </div>
   </div>
 
@@ -243,6 +297,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/08/08/flowable%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E9%83%A8%E7%BD%B2/">flowable的初始化部署</a>
+          </li>
         
           <li>
             <a href="/2024/08/06/WinRAR%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">WinRAR环境配置</a>
@@ -269,7 +327,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2024 John Doe<br>
+      &copy; 2024 wanna<br>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

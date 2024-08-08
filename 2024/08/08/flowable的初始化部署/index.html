@@ -4,19 +4,23 @@
   <meta charset="utf-8">
   
   
-  <title>Hello World | Hexo</title>
+  <title>flowable的初始化部署 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="当我使用flowable7.0.1时，当时在tomcat部署时，使用的 1.\catalina run 命令部署flowable。使用下面命令验证一下 1curl --user rest-admin:test http:&#x2F;&#x2F;localhost:8080&#x2F;flowable-rest&#x2F;service&#x2F;management&#x2F;engine 会返回404的错误，不是一个json字符串 但我以为会是flowa">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/12/22/hello-world/index.html">
+<meta property="og:title" content="flowable的初始化部署">
+<meta property="og:url" content="http://example.com/2024/08/08/flowable%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E9%83%A8%E7%BD%B2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="当我使用flowable7.0.1时，当时在tomcat部署时，使用的 1.\catalina run 命令部署flowable。使用下面命令验证一下 1curl --user rest-admin:test http:&#x2F;&#x2F;localhost:8080&#x2F;flowable-rest&#x2F;service&#x2F;management&#x2F;engine 会返回404的错误，不是一个json字符串 但我以为会是flowa">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-12-22T07:27:59.209Z">
-<meta property="article:modified_time" content="2023-12-22T07:27:59.209Z">
+<meta property="og:image" content="http://example.com/2024/08/08/flowable%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E9%83%A8%E7%BD%B2/1.png">
+<meta property="og:image" content="http://example.com/2024/08/08/flowable%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E9%83%A8%E7%BD%B2/2.png">
+<meta property="article:published_time" content="2024-08-08T01:49:27.000Z">
+<meta property="article:modified_time" content="2024-08-08T02:29:58.228Z">
 <meta property="article:author" content="wanna">
+<meta property="article:tag" content="flowable">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2024/08/08/flowable%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E9%83%A8%E7%BD%B2/1.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -75,10 +79,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-flowable的初始化部署" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/12/22/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-12-22T07:27:59.209Z" itemprop="datePublished">2023-12-22</time>
+    <a href="/2024/08/08/flowable%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E9%83%A8%E7%BD%B2/" class="article-date">
+  <time class="dt-published" datetime="2024-08-08T01:49:27.000Z" itemprop="datePublished">2024-08-08</time>
 </a>
     
   </div>
@@ -89,7 +93,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Hello World
+      flowable的初始化部署
     </h1>
   
 
@@ -97,42 +101,37 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <p>当我使用flowable7.0.1时，当时在tomcat部署时，使用的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\catalina run</span><br></pre></td></tr></table></figure>
+<p>命令部署flowable。<br>使用下面命令验证一下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --user rest-admin:<span class="built_in">test</span> http://localhost:8080/flowable-rest/service/management/engine</span><br></pre></td></tr></table></figure>
+<p>会返回404的错误，不是一个json字符串<br><img src="/2024/08/08/flowable%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E9%83%A8%E7%BD%B2/1.png" alt="图1"></p>
+<p>但我以为会是flowable版本问题，就换了个6.8.1(但应该跟这个没关系),而是直接使用tomcat启动命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">startup.bat</span><br></pre></td></tr></table></figure>
+<p>或 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">startup.sh</span><br></pre></td></tr></table></figure>
+<p>我用的是startup.bat，就成功了<br><img src="/2024/08/08/flowable%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E9%83%A8%E7%BD%B2/2.png" alt="图2"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/12/22/hello-world/" data-id="clzknuly80003dove1agrfh0x" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/08/08/flowable%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E9%83%A8%E7%BD%B2/" data-id="clzknuly40001dove5dlzgl6f" data-title="flowable的初始化部署" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flowable/" rel="tag">flowable</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2023/12/22/%E6%88%91%E7%9A%84%E4%BA%BA%E7%94%9F%E5%8E%86%E7%A8%8B/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          我的人生历程
-        
-      </div>
-    </a>
   
+    <a href="/2024/08/06/WinRAR%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">WinRAR环境配置</div>
+    </a>
   
 </nav>
 
